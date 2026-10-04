@@ -45,9 +45,12 @@ Once the booking was saved, the old selection and movie details were still showi
 
 ## Getting Started
 
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/rohitha-kodikara/seat-booking
+
+cd <project-folder>
+
 npm install
+
 npm run dev
 
 
