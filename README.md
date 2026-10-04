@@ -1,4 +1,4 @@
-# 🎬 Seat Booking App
+# 🎬 Seat Booking App (live url : https://seat-booking-omega-seven.vercel.app/)
 
 A responsive movie seat booking app built with React and Tailwind CSS. Users pick a movie and showtime, choose seats from a theatre layout, and confirm their booking.
 
@@ -47,7 +47,7 @@ Once the booking was saved, the old selection and movie details were still showi
 
 git clone https://github.com/rohitha-kodikara/seat-booking
 
-cd <project-folder>
+cd project-folder
 
 npm install
 
