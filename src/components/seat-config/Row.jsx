@@ -1,8 +1,9 @@
 import React from 'react'
 import Seat from './Seat'
 
-const Row = (  { row }) => {
+const Row = (  { row, handleSeatSelection, selectedSeats, takenSeats }) => {
   
+
   return (
    <div key={row[0].id} className="flex items-center gap-2 sm:gap-3">
             {/* Row letter: "A1" -> "A" */}
@@ -11,7 +12,13 @@ const Row = (  { row }) => {
             </span>
  
             {row.map((seat, index) => (
-              <Seat key={seat.id} seat={seat} index={index} />
+              <Seat  
+              key={seat.id} 
+              seat={seat} 
+              index={index} 
+              handleSeatSelection={handleSeatSelection} 
+              takenSeats={takenSeats}
+              selectedSeats={selectedSeats} />
             ))}
           </div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DropdownControls = ({ movies, setMovieName }) => { 
+const DropdownControls = ({ movies, setMovieName, setMovieTime }) => { 
   
   const movieNames = movies.map(movie => movie.movie);
   const movieTimes = movies.map(movie => movie.time);
@@ -15,10 +15,10 @@ const DropdownControls = ({ movies, setMovieName }) => {
             ))
            }
           </select>
-          <select className="w-full rounded-xl border border-emerald-500 bg-emerald-800 px-4 py-3 text-lg font-semibold text-white outline-none focus:border-lime-300 focus:ring-2 focus:ring-lime-300/40">
+          <select onChange={(e) => setMovieTime(e.target.value)} className="w-full rounded-xl border border-emerald-500 bg-emerald-800 px-4 py-3 text-lg font-semibold text-white outline-none focus:border-lime-300 focus:ring-2 focus:ring-lime-300/40">
             {
               movieTimes.map((time, index) => (
-                <option key={index} className="text-white">{time}</option>
+                <option value={time} key={index} className="text-white">{time}</option>
               ))
             }
           </select>
