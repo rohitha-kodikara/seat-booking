@@ -31,9 +31,6 @@ const BookingSummary = ({ movieName, movieTime, selectedSeats, editableTicketPri
             className="cursor-pointer w-full rounded-xl bg-lime-300 py-3 text-lg font-bold text-emerald-950 transition hover:bg-lime-200">
               Confirm booking
             </button>
-            <button className="cursor-pointer mt-3 w-full text-sm text-lime-200 transition hover:text-white">
-              Clear selection
-            </button>
           </div>
   )
 }

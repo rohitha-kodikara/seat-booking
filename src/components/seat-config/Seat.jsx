@@ -13,7 +13,6 @@ const Seat = ({ seat, index, handleSeatSelection,selectedSeats, takenSeats }) =>
       disabled={isUnavailable}
      onClick={() => {handleSeatSelection(seat.id)}}
                 key={seat.id}
-                // disabled={seat.status === 'unavailable'}
                 className={`h-9 w-9 cursor-pointer rounded-lg border 
                   ${isSelected ? 'bg-gradient-to-br from-amber-300 to-pink-500' : 'border-[#a87800] bg-[#211d18]'} 
                   ${isTaken ? 'bg-white/10 border-none text-black cursor-not-allowed' : ''}

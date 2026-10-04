@@ -5,7 +5,7 @@ const DropdownControls = ({ movies, setMovieName, setMovieTime }) => {
   const movieNames = movies.map(movie => movie.movie);
   const movieTimes = movies.map(movie => movie.time);
 
-  // Log the movie times to the console
+
   return (
      <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-[1fr_200px]">
           <select onChange={(e) => setMovieName(e.target.value)} className="w-full rounded-xl border border-emerald-500 bg-emerald-800 px-4 py-3 text-lg font-semibold text-white outline-none focus:border-lime-300 focus:ring-2 focus:ring-lime-300/40">

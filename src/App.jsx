@@ -3,95 +3,7 @@ import Header from './components/Header'
 import Theatre from './components/seat-config/Theatre'
 import BookingSummary from './components/BookingSummary'
 import Swal from 'sweetalert2';
-
-
-
-const movies = [
-  {
-    id: 1,
-    movie: "Midnight Express",
-    time: "7:30 PM",
-  },
-  {
-    id: 2,
-    movie: "The Dark Knight",
-    time: "5:00 PM",
-  },
-  {
-    id: 3,
-    movie: "Inception",
-    time: "8:30 PM",
-  },
-  {
-    id: 4,
-    movie: "Interstellar",
-    time: "6:45 PM",
-  },
-  {
-    id: 5,
-    movie: "Avengers: Endgame",
-    time: "9:00 PM",
-  },
-];
-
-const defaultSeats = [
-  [
-    { id: "A1", status: "available" },
-    { id: "A2", status: "available" },
-    { id: "A3", status: "available" },
-    { id: "A4", status: "available" },
-    { id: "A5", status: "available" },
-    { id: "A6", status: "available" },
-    { id: "A7", status: "available" },
-    { id: "A8", status: "available" },
-  ],
-
-  [
-    { id: "B1", status: "available" },
-    { id: "B2", status: "available" },
-    { id: "B3", status: "available" },
-    { id: "B4", status: "available" },
-    { id: "B5", status: "available" },
-    { id: "B6", status: "available" },
-    { id: "B7", status: "available" },
-    { id: "B8", status: "available" },
-  ],
-
-  [
-    { id: "C1", status: "available" },
-    { id: "C2", status: "available" },
-    { id: "C3", status: "available" },
-    { id: "C4", status: "available" },
-    { id: "C5", status: "available" },
-    { id: "C6", status: "available" },
-    { id: "C7", status: "available" },
-    { id: "C8", status: "available" },
-  ],
-
-  [
-    { id: "D1", status: "available" },
-    { id: "D2", status: "available" },
-    { id: "D3", status: "available" },
-    { id: "D4", status: "available" },
-    { id: "D5", status: "available" },
-    { id: "D6", status: "available" },
-    { id: "D7", status: "available" },
-    { id: "D8", status: "available" },
-  ],
-
-  [
-    { id: "E1", status: "available" },
-    { id: "E2", status: "available" },
-    { id: "E3", status: "unavailable" },
-    { id: "E4", status: "available" },
-    { id: "E5", status: "available" },
-    { id: "E6", status: "available" },
-    { id: "E7", status: "taken" },
-    { id: "E8", status: "available" },
-  ],
-];
-
-
+import { defaultSeats, movies } from './data'
 
 const App = () => {
 
@@ -99,7 +11,7 @@ const[seats, setSeats] = useState(defaultSeats);
 const[movieName,setMovieName] = useState('Select a Movie');
 const [movieTime, setMovieTime] = useState('Pick a Time');
 const [selectedSeats, setSelectedSeats] = useState([]);
-// const[takenSeats, setTakenSeats] = useState(selectedSeats);
+
 
 
  function handleSeatSelection(seatId) {
@@ -122,8 +34,6 @@ const takenSeats = seats.flat().filter(seat => seat.status === "taken").map(seat
  function handleConfirmBooking(allSelectedSeats) {
  
   if (selectedSeats.length > 0) {
-    // Swal.fire("Booking confirmed!", "Your seats have been reserved.", "success");
-
     Swal.fire({
   title: "Are you sure?",
   text: "You won't be able to revert this!",
